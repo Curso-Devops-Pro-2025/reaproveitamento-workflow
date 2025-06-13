@@ -14,3 +14,5 @@ jobs:
   CD:
     needs: [CI]
     uses: Curso-Devops-Pro-2025/reaproveitamento-workflow/.github/workflows/cd.yaml@master
+    with:
+      environment: prod
