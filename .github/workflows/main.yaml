@@ -1,6 +1,17 @@
 name: CI/CD Fake
 on:
   workflow_dispatch:
+    inputs:
+      environment:
+        type: choice
+        default: dev
+        required: true
+        description: Environment of deployment
+        options:
+          - dev
+          - test
+          - staging
+          - prod
 jobs:
   CI:
     runs-on: ubuntu-latest
@@ -15,4 +26,4 @@ jobs:
     needs: [CI]
     uses: Curso-Devops-Pro-2025/reaproveitamento-workflow/.github/workflows/cd.yaml@master
     with:
-      environment: prod
+      environment: {{ inputs.environment }}
