@@ -14,5 +14,5 @@ jobs:
   CD:
     needs: [CI]
     uses: Curso-Devops-Pro-2025/reaproveitamento-workflow/.github/workflows/cd.yaml@master
-    secrets:
-      environment: ${{ secrets.DELIVERY_ENVIRONMENT }}
+    secrets: inherit
+      # environment: ${{ secrets.DELIVERY_ENVIRONMENT }}
