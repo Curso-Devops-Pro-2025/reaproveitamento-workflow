@@ -1,11 +1,6 @@
 name: Fake Deploy
 on:
   workflow_call:
-    secrets:
-      environment:
-        required: true
-        description: Environment of deployment
-
 jobs:
   deploy-k8s:
     runs-on: ubuntu-latest
