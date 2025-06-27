@@ -13,6 +13,6 @@ jobs:
         run: echo "Publicação da Relase final"
   CD:
     needs: [CI]
-    uses: Curso-Devops-Pro-2025/reaproveitamento-workflow/.github/workflows/cd.yaml@master
+    uses: Curso-Devops-Pro-2025/repo-deploy/.github/workflows/main.yml@master
     secrets: inherit
       # environment: ${{ secrets.DELIVERY_ENVIRONMENT }}
